@@ -172,7 +172,6 @@ export const useMapStore = defineStore("map", {
 					tiles: [
 						`https://citydashboard.taipei/geo_server/gwc/service/tms/1.0.0/taipei_vioc:metrotaipei_village@EPSG:900913@pbf/{z}/{x}/{y}.pbf`,
 						// `${location.origin}/geo_server/gwc/service/tms/1.0.0/taipei_vioc:metrotaipei_village@EPSG:900913@pbf/{z}/{x}/{y}.pbf`,
-
 					],
 				})
 				.addLayer(metroTpVillage);
@@ -213,6 +212,7 @@ export const useMapStore = defineStore("map", {
 			const images = [
 				"metro",
 				"old_man",
+				"camera",
 				"triangle_green",
 				"triangle_white",
 				"bike_green",
@@ -387,10 +387,10 @@ export const useMapStore = defineStore("map", {
 						tolerance: 0,
 						// 限制瓦片範圍在當前可視區域
 						bounds: [
-							bounds.getWest(),  // 最小經度
+							bounds.getWest(), // 最小經度
 							bounds.getSouth(), // 最小緯度
-							bounds.getEast(),  // 最大經度
-							bounds.getNorth()  // 最大緯度
+							bounds.getEast(), // 最大經度
+							bounds.getNorth(), // 最大緯度
 						],
 						// // 限制縮放級別
 						// minzoom: Math.floor(this.map.getZoom() - 1),
