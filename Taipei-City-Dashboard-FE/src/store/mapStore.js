@@ -211,8 +211,9 @@ export const useMapStore = defineStore("map", {
 		addSymbolSources() {
 			const images = [
 				"metro",
-				"old_man",
+				"artist",
 				"camera",
+				"old_man",
 				"triangle_green",
 				"triangle_white",
 				"bike_green",
